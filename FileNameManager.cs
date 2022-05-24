@@ -14,5 +14,19 @@ namespace ILCommon
                 .Replace ("-[rarbg.to]", "")
                 .Replace ("[rarbg]", "");
         }
+
+        public bool IsMostlyLatin (String fileName)
+        {
+            var cc = fileName.ToCharArray ();
+            var latinc = 0;
+
+            foreach (char c in cc) {
+                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+                    latinc++;
+                }
+            }
+
+            return ((double) latinc / (double) cc.Length) > 0.5;
+        }
     }
 }
