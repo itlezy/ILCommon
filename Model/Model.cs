@@ -9,7 +9,7 @@ using SQLite;
 namespace ILCommon.Model
 {
     /// <summary>
-    /// Represents a torrent file info, to skip duplicates
+    /// Represents a torrent file info, to skip duplicates, used by ArchiveTorrents
     /// </summary>
     public class MDownloadedTorr
     {
@@ -23,7 +23,7 @@ namespace ILCommon.Model
     }
 
     /// <summary>
-    /// Represents an already downloaded file (not a torrent, but its actual content)
+    /// Represents an already downloaded file (not a torrent, but its actual content), used by ArchiveTorrents
     /// </summary>
     public class MDownloadedFile
     {
@@ -35,7 +35,7 @@ namespace ILCommon.Model
     }
 
     /// <summary>
-    /// Represents a log entry for a found hash
+    /// Represents a log entry for a found hash, used by MetadataDownloader
     /// </summary>
     public class MTorrLog
     {
@@ -48,7 +48,7 @@ namespace ILCommon.Model
     }
 
     /// <summary>
-    /// Represents a torrent metadata
+    /// Represents a torrent metadata, used by MetadataDownloader
     /// </summary>
     public class MTorr
     {
